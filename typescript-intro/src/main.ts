@@ -3,6 +3,8 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 import { name, age} from "./bases/01-types";
+import { charmander } from './bases/03-class';
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -13,6 +15,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </a>
     <h1>Vite + TypeScript</h1>
     <h5>${name} - ${age}</h5>
+    <h5>${charmander.name}</h5>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
