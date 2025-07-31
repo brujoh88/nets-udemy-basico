@@ -6,6 +6,7 @@ import { name, age} from "./bases/01-types";
 import { charmander } from './bases/03-class';
 import { charmander2 } from './bases/04-injection.ts';
 import { charmander3 } from './bases/05-decorators.ts';
+import { charmander4 } from './bases/06-decorators.ts';
 
 
 
@@ -25,6 +26,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h5>${charmander2.name}</h5>
     <h1>03</h1>
     <h5>${charmander3.name}</h5>
+    <h1>04</h1>
+    <h5>${charmander4.name}</h5>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
