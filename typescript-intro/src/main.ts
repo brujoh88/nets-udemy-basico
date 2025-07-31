@@ -3,7 +3,9 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 import { name, age} from "./bases/01-types";
-import { charmander } from './bases/03-class';
+//import { charmander } from './bases/03-class';
+import { charmander } from './bases/04-injection.ts';
+
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
