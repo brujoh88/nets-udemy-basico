@@ -1,11 +1,25 @@
-import { type PokeapiResponse } from '../../interfaces/pokeapi-response.interface';
 import axios from 'axios';
-export class PokerApiAdapter {
 
+export interface HttpAdapter {
+    get<T>(url: string):Promise<T>
+}
+
+export class PokeApiFetchAdapter implements HttpAdapter {
+
+    public async get<T>( url: string): Promise<T> {
+        const resp = await fetch(url)
+        const data: T = await resp.json()
+        console.log('Con Fetch')
+        return data
+    }
+}
+
+export class PokeApiAdapter  implements HttpAdapter {
     private readonly axios = axios
 
-    public async get( url: string) {
-        const { data } = await this.axios.get(url);        
+    public async get<T>( url: string): Promise<T> {
+        const { data } = await this.axios.get<T>(url);
+        console.log('Con Axios')
         return data
     }
     
